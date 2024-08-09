@@ -7,8 +7,7 @@ import pickle
 clf = pickle.load(open("case_study_emp.pkl","rb"))
 
 def predict(data):
-    clf = pickle.load(open("case_study_emp.pkl","rb"))
-    return clf.predict(data)
+	return clf.predict(data)
 
 
 st.title("Employee Attrition Rate Project using Machine Learning")
@@ -36,4 +35,4 @@ if st.button("Predict Performance Rate"):
     result = clf.predict(
         np.array([[el,tos,top,gr,gr1,1,1,1,1,1,0]]))
     st.text(result[0])
-st.markdown("Developed by Madhu Mishra")
+st.markdown("Developed by Pratha Modasia")
